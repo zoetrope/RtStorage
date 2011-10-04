@@ -1,0 +1,10 @@
+
+/work
+bin
+obj
+/TestResults
+/vendor
+/reference
+*.suo
+/_ReSharper.RtStorage
+*.user
