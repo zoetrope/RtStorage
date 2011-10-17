@@ -45,7 +45,7 @@ namespace RtStorage.Test
             data.tm.nsec.Is(0x34);
             data.data.Is(0x5678);
 
-            ObjectDumper.Write(data);
+            //ObjectDumper.Write(data);
         }
     }
 }
