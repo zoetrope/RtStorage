@@ -15,14 +15,15 @@ namespace RtStorage.Models
             get { return _baseDirectory; }
             set
             {
+                var dir = Environment.ExpandEnvironmentVariables(value);
                 // ディレクトリ名の末尾に区切り文字(/)がついていない場合は勝手につける。
-                if (value.EndsWith(Path.DirectorySeparatorChar.ToString()))
+                if (dir.EndsWith(Path.DirectorySeparatorChar.ToString()))
                 {
-                    _baseDirectory = value;
+                    _baseDirectory = dir;
                 }
                 else
                 {
-                    _baseDirectory = value + Path.DirectorySeparatorChar;
+                    _baseDirectory = dir + Path.DirectorySeparatorChar;
                 }
             }
         }

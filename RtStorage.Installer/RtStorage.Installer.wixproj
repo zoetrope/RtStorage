@@ -6,7 +6,7 @@
     <ProductVersion>3.5</ProductVersion>
     <ProjectGuid>{6dbcb531-fa12-4810-96cf-a36d7be737fc}</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>RtStorage-0.1.0</OutputName>
+    <OutputName>RtStorage-0.2.0</OutputName>
     <OutputType>Package</OutputType>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>

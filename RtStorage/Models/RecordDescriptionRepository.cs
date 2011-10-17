@@ -4,9 +4,11 @@ using System.Configuration;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using Codeplex.Data;
 using Livet;
+using RtStorage.Properties;
 
 namespace RtStorage.Models
 {
@@ -22,11 +24,10 @@ namespace RtStorage.Models
 
         public RecordDescriptionRepository(string connectionString)
         {
-            var dir = Environment.ExpandEnvironmentVariables(SettingHolder.BaseDirectory);
-
-            var newConnectionString = connectionString.Replace("Data Source=", "Data Source=" + dir);
+            var newConnectionString = connectionString.Replace("Data Source=", "Data Source=" + SettingHolder.BaseDirectory);
 
             _connectionString = newConnectionString;
+
         }
         
         public IEnumerable<RecordDescription> GetRecordDescriptions(SearchCondition param)

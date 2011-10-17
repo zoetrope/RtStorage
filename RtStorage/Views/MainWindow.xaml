@@ -7,7 +7,7 @@
         xmlns:v="clr-namespace:RtStorage.Views"
         xmlns:vm="clr-namespace:RtStorage.ViewModels" 
         xmlns:Behaviors="clr-namespace:RtStorage.Views.Behaviors"
-        Title="MainWindow" Height="600" Width="800">
+        Title="RtStorage" Height="600" Width="800">
     
     <Window.DataContext>
         <vm:MainWindowViewModel/>

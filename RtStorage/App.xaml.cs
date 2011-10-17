@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Windows;
@@ -32,7 +33,30 @@ namespace RtStorage
             CorbaUtility.Initialize();
             LogManager.Initialize();
             SettingHolder.BaseDirectory = Settings.Default.DataDirectory;
-            
+
+
+            var dir = SettingHolder.BaseDirectory;
+            try
+            {
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+                // データベースファイルが見つからなかった場合は、空のファイルを作成
+                var filePath = dir + "RecordDescriptions.db";
+                if (!File.Exists(filePath))
+                {
+                    using (var writer = new BinaryWriter(File.Create(filePath)))
+                    {
+                        writer.Write(RtStorage.Properties.Resources.RecordDescriptions);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //TODO: ユーザーへのエラー通知が必要
+            }
+
 #if !USE_MOCK
             NamingServiceManager.Default.Initialize();
 #endif
@@ -152,7 +176,8 @@ namespace RtStorage
         {
             //TODO:ロギング処理など
             MessageBox.Show(
-                "不明なエラーが発生しました。アプリケーションを終了します。",
+                //"不明なエラーが発生しました。アプリケーションを終了します。",
+                (e.ExceptionObject as Exception).Message,
                 "エラー",
                 MessageBoxButton.OK,
                 MessageBoxImage.Error);

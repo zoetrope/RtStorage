@@ -39,21 +39,12 @@
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
 				<Directory Id="INSTALLLOCATION" Name="RtStorage">
-          <Directory Id="Directory.Binaries" Name="bin"/>
+          <Directory Id="Directory.Binaries" Name="bin">
+            <Directory Id="Directory.Data" Name="Data"/>
+          </Directory>
           <Directory Id="Directory.Documents" Name="doc"/>
 				</Directory>
 			</Directory>
-
-
-      <!-- データはCommonAppDataFolderに配置する -->
-      <!-- XP: C:\Documents and Settings\All Users -->
-      <!-- Vista/7: C:\ProgramData -->
-      <Directory Id="CommonAppDataFolder">
-        <Directory Id="DATALOCATION" Name="RtStorage">
-          <Directory Id="Directory.Data" Name="Data"/>
-        </Directory>
-      </Directory>
-
 
       <!-- スタートメニューへのショートカットの登録 -->
       <Directory Id="ProgramMenuFolder">

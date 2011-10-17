@@ -92,7 +92,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Center" Text="分割数"/>
-                        <TextBox Grid.Column="1" Text="{Binding Analyzer.PartitionNumber}" />
+                        <TextBox Grid.Column="1" Margin="0,5,0,5" Text="{Binding Analyzer.PartitionNumber}" />
                         <Button Grid.Column="2" Margin="10,0,10,0" Padding="20,5,20,5" Content="更新" Command="{Binding UpdateCommand}"/>
                     </Grid>
             </GroupBox>

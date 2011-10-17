@@ -19,10 +19,10 @@ http://msdn.microsoft.com/ja-jp/library/8z6watww.aspx
 ^^^^^^^^^^^^^^^^^^^^^^^^
 RtStorageでは2種類のインストールパッケージを用意しています。
 
-RtStorage-0.1.0.msi
+RtStorage-0.2.0.msi
   インストーラを起動してインストールを行ってください。
 
-RtStorage-0.1.0.zip
+RtStorage-0.2.0.zip
   zipファイルを任意のフォルダに展開してください。
 
 
@@ -38,8 +38,4 @@ zip形式のパッケージを使った場合は、ファイルの削除を行�
 設定ファイルの保存場所
  * Windows 7の場合、C:\Users\ユーザ名\AppData\Local\RtStorage
  * Windows XPの場合、C:\Documents and Settings\ユーザ名\Local Settings\Application Data\RtStorage
-
-データファイルの保存場所
- * Windows 7の場合、C:\ProgramData\RtStorage
- * Windows XPの場合、C:\Documents and Settings\All Users\RtStorage
 
