@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Product.wxi?>
+    <Fragment>
+        <DirectoryRef Id="Directory.Documents">
+                <Component Id="cmpA0B4C36E53C7993CD3A7D9F7E713F310" Guid="{72F71507-81DD-4F52-96D0-E5351A776808}">
+                    <File Id="fil7F88FAD797D51191BD5FD0243EF78471" KeyPath="yes" Source="$(var.DocumentDir)\.buildinfo" />
+                </Component>
+                <Component Id="cmpAB96E32DA6B40B1D235902DAA4F0AEEF" Guid="{7E7C84E0-0445-47D5-9200-9763263BB8AB}">
+                    <File Id="fil4530AB06BE7826FD1CA4399EE4B95818" KeyPath="yes" Source="$(var.DocumentDir)\index.html" />
+                </Component>
+                <Component Id="cmp6BE8B141EA6990618AEAD47B060B18F0" Guid="{B870D660-F6C6-4CBD-B455-AEB6AEA742CE}">
+                    <File Id="fil2CC50A0A70D0B1048DCD336352FD0398" KeyPath="yes" Source="$(var.DocumentDir)\installation.html" />
+                </Component>
+                <Component Id="cmpC13F321535DAD0CF77ED590CF3FD28CF" Guid="{15B3E697-5844-484A-81B5-B3EE192403A0}">
+                    <File Id="filE870B731B65617D68BDE6B93B96ED3E5" KeyPath="yes" Source="$(var.DocumentDir)\introduction.html" />
+                </Component>
+                <Component Id="cmpA83A12DA2CF5792047CB3FB76E0C1EDB" Guid="{A875C1B5-7535-4E9F-B725-DCDD4A8A1D7B}">
+                    <File Id="fil33800201B759E43D7CEB7C0370234B74" KeyPath="yes" Source="$(var.DocumentDir)\library.html" />
+                </Component>
+                <Component Id="cmpC170A117362DCEAD2665BEC4CF004CEA" Guid="{F45B93FC-3764-4DDC-BB0C-331C337D095F}">
+                    <File Id="filB66B2DF9FFB16D4904C0C20BF1E05019" KeyPath="yes" Source="$(var.DocumentDir)\objects.inv" />
+                </Component>
+                <Component Id="cmp236829F1DE0E5D58C421FE11899977C0" Guid="{543DB2F5-9B3C-4B46-9733-BD3F122D2DE7}">
+                    <File Id="fil5F285B00E7FBD568DF9E125D1BBC9D0F" KeyPath="yes" Source="$(var.DocumentDir)\release_note.html" />
+                </Component>
+                <Component Id="cmpE246D0CAD6619138F4C3999994E58C24" Guid="{B40CF02F-5272-48E2-8938-ABE94BCBE8A9}">
+                    <File Id="filEB83C81D597A6B394818F1116530A8D5" KeyPath="yes" Source="$(var.DocumentDir)\search.html" />
+                </Component>
+                <Component Id="cmp000C1F1F19F2C88F462704CE87151837" Guid="{74A8DC6F-DD6D-4361-B460-241959F1038A}">
+                    <File Id="fil23BA3292014267C1CC78889C62CBE636" KeyPath="yes" Source="$(var.DocumentDir)\searchindex.js" />
+                </Component>
+                <Component Id="cmp50DBB03D39641230CF3F31C0BF902168" Guid="{1CE15E5F-0333-48F7-8B1E-D785D6238FDF}">
+                    <File Id="filAE3D67B4F2D0C405E61F9DE4D1B677E9" KeyPath="yes" Source="$(var.DocumentDir)\usage.html" />
+                </Component>
+                <Directory Id="dirB86912B694E076F033ACA75BE6863956" Name="_sources">
+                    <Component Id="cmp0376553591AF5FCBDA85C1D0ECADD352" Guid="{7F79F9FC-2FCB-4AE3-B889-AF52AC4BED8D}">
+                        <File Id="fil76C5CE4BF255FD00DE86426AE121AD88" KeyPath="yes" Source="$(var.DocumentDir)\_sources\index.txt" />
+                    </Component>
+                    <Component Id="cmpC3B886E61184F579CD418322614B36EC" Guid="{097BD40D-344C-47E3-98C4-9C5B212A23FE}">
+                        <File Id="filEAB42E361591A8D4DE4312BC543EF442" KeyPath="yes" Source="$(var.DocumentDir)\_sources\installation.txt" />
+                    </Component>
+                    <Component Id="cmp71AF02FBACFF3533F8AEE5BE0306D902" Guid="{5FE022B7-AA25-4EE6-801E-9F9B1659123D}">
+                        <File Id="fil8A1F878FB877A02C445CD57EEAE68D48" KeyPath="yes" Source="$(var.DocumentDir)\_sources\introduction.txt" />
+                    </Component>
+                    <Component Id="cmpD295E6B7DAF08809E04097E4520FAD08" Guid="{E35AE3C8-1383-4421-B966-B1628D3B5F6E}">
+                        <File Id="filFCAF73886EDEDA4B6488C8948E8E21CE" KeyPath="yes" Source="$(var.DocumentDir)\_sources\library.txt" />
+                    </Component>
+                    <Component Id="cmp4C73951BC0F660AC10837859F7BF3DC1" Guid="{76612C1E-A8BF-48C9-98F0-6D453B5C378F}">
+                        <File Id="fil06422287FE52B87636E3DBF7ACBB2E8D" KeyPath="yes" Source="$(var.DocumentDir)\_sources\release_note.txt" />
+                    </Component>
+                    <Component Id="cmpC0A62AE5525D08098650B3F620081888" Guid="{E24DBE2B-AEAC-4A72-85FE-9B974C4E3DD5}">
+                        <File Id="fil51741E4D2C4D8C6CA70B27A4D2279254" KeyPath="yes" Source="$(var.DocumentDir)\_sources\usage.txt" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir4399F08515B6FF2334637EDF733BE95E" Name="_static">
+                    <Component Id="cmp8754D7FE486E3948343B8827B301DC35" Guid="{1DC2F5A7-8EC0-4D3B-9240-1B1E7D1EEF6E}">
+                        <File Id="fil50457B4000DAF48094EB18EDC2D3159B" KeyPath="yes" Source="$(var.DocumentDir)\_static\ajax-loader.gif" />
+                    </Component>
+                    <Component Id="cmp06D0CE9A20C337FB63E4F689E9C50F31" Guid="{5AD2CE73-A4E5-4AF0-ACDD-28FF423D6DF6}">
+                        <File Id="fil4F3418E5CEE41CBD36115E9FB0F0A5C3" KeyPath="yes" Source="$(var.DocumentDir)\_static\basic.css" />
+                    </Component>
+                    <Component Id="cmp04DFF4BC92CA3C01A9CC0A48C2B22FF6" Guid="{1E8D8F28-64F9-4F81-BA72-01114F88698D}">
+                        <File Id="filD8541BE34CCBAF9EB4895CD1CEACAEC7" KeyPath="yes" Source="$(var.DocumentDir)\_static\comment-bright.png" />
+                    </Component>
+                    <Component Id="cmp4D4E29CB65F9A53870A3835E49E28119" Guid="{D1539ED3-7DE8-40DE-BF7E-29A42BE3B97D}">
+                        <File Id="filEFE6B1A3A262CC4DA2F2D8D213A5DF54" KeyPath="yes" Source="$(var.DocumentDir)\_static\comment-close.png" />
+                    </Component>
+                    <Component Id="cmp00009F33281088F0715DCA659CBC3EA3" Guid="{1F2EE217-3C0F-4C7E-A196-94FB98218577}">
+                        <File Id="fil2D7A7BDD5AD01F52693B094FE5526F06" KeyPath="yes" Source="$(var.DocumentDir)\_static\comment.png" />
+                    </Component>
+                    <Component Id="cmpDB9171B371E9B143437D744BE9684034" Guid="{74441A92-6E18-4570-B048-4FF476AD70C9}">
+                        <File Id="fil52B9BC52F4FE910FCA9F35995140C9AA" KeyPath="yes" Source="$(var.DocumentDir)\_static\default.css" />
+                    </Component>
+                    <Component Id="cmp48664F49A4676959B235073225DF8746" Guid="{ADFEBCC2-84C8-4DEC-B6ED-7BA3E9E61BD9}">
+                        <File Id="fil1024007FBCBC84F87628CC5F17E3AC42" KeyPath="yes" Source="$(var.DocumentDir)\_static\doctools.js" />
+                    </Component>
+                    <Component Id="cmp87B6614F9DF1F1A2922F1C225C53718C" Guid="{88D3A5F8-4CE7-4C23-9B28-FE7B1D45C216}">
+                        <File Id="filA3B6EFD5123DE88CE1C77BEDDE84371E" KeyPath="yes" Source="$(var.DocumentDir)\_static\down-pressed.png" />
+                    </Component>
+                    <Component Id="cmp0AB5A64FC97FC2B5DC34C09ED3802187" Guid="{7130044A-D846-4E74-A7A2-1BEDE6C800E2}">
+                        <File Id="fil0EF10D7173F2603C22C82C0398DA5A6B" KeyPath="yes" Source="$(var.DocumentDir)\_static\down.png" />
+                    </Component>
+                    <Component Id="cmp676D17C613EE4668AF93EB2BC84A87C6" Guid="{55F75391-E8F9-4939-B9C7-4C0DE240556F}">
+                        <File Id="filD4EF54996326B6D6834C5417358EEBC1" KeyPath="yes" Source="$(var.DocumentDir)\_static\file.png" />
+                    </Component>
+                    <Component Id="cmpA1EAB735EC9C7BF182078350FEBC9680" Guid="{39667718-C238-40A1-9C6F-385C0EAA6BA2}">
+                        <File Id="fil2DE3BE9DF01DABF01D27E0C6D53283FC" KeyPath="yes" Source="$(var.DocumentDir)\_static\jquery.js" />
+                    </Component>
+                    <Component Id="cmp088647BBA12AD0641A1AF343F9F4612A" Guid="{44214870-C60D-4E4A-BE17-03A77144F9B0}">
+                        <File Id="fil81BD2AAC813CC5A343E5CBC136B8E047" KeyPath="yes" Source="$(var.DocumentDir)\_static\minus.png" />
+                    </Component>
+                    <Component Id="cmp3DC6A232FFA3C6292B9274A54E46AB60" Guid="{450C4A07-1738-4787-95DA-1267A29DC2E9}">
+                        <File Id="filDEE01CE787F7299B8D430C5D4F8AC791" KeyPath="yes" Source="$(var.DocumentDir)\_static\plus.png" />
+                    </Component>
+                    <Component Id="cmp5827FEC8F455840F8F3DBF19CB9C4D61" Guid="{C3B62D5A-1326-41AA-BE87-818E97167E2D}">
+                        <File Id="fil915FC082AECE7E0C8729C0A24C98C8BF" KeyPath="yes" Source="$(var.DocumentDir)\_static\pygments.css" />
+                    </Component>
+                    <Component Id="cmp582116F144B2E95585AB9FEFFA0D6E6A" Guid="{1E9C4B7E-F8CE-4D1D-A21E-07057037213C}">
+                        <File Id="filA15C83CC588C9C199C67D15AF0D64492" KeyPath="yes" Source="$(var.DocumentDir)\_static\searchtools.js" />
+                    </Component>
+                    <Component Id="cmp9D5756451EBFC0D9815C6CC5ACC1DD57" Guid="{20D63635-58F3-4D43-9E53-291530B4741D}">
+                        <File Id="filB04749818A618A9753C5C0473AD4614F" KeyPath="yes" Source="$(var.DocumentDir)\_static\sidebar.js" />
+                    </Component>
+                    <Component Id="cmp617C1E575F1F379E62782F231493CA75" Guid="{C4D1E1FC-0E74-4B64-A5DC-29AB9FE51946}">
+                        <File Id="filCCCA864E7880448BB2AB58AEFE815F0E" KeyPath="yes" Source="$(var.DocumentDir)\_static\translations.js" />
+                    </Component>
+                    <Component Id="cmp797977C914CF2B695BE24FFACE4703CC" Guid="{26DB5BCD-5E05-4A8F-98CC-EC6D6ADECF92}">
+                        <File Id="filFC82B717ABF4215BEEB51924986A2EA6" KeyPath="yes" Source="$(var.DocumentDir)\_static\underscore.js" />
+                    </Component>
+                    <Component Id="cmp9A659A611E76226227FD3E100D43CD5D" Guid="{2EC231AE-D888-4E67-8E63-2D7444304DB9}">
+                        <File Id="filB3B672EA8DEB4595F6A7F808B7A4E0CF" KeyPath="yes" Source="$(var.DocumentDir)\_static\up-pressed.png" />
+                    </Component>
+                    <Component Id="cmp8A77062CD42B895BED01E945E7882691" Guid="{18AC8DCF-4162-45E2-9193-E6C1FAA387BB}">
+                        <File Id="filFD5B8563B4B354A4E269BDD81DC81422" KeyPath="yes" Source="$(var.DocumentDir)\_static\up.png" />
+                    </Component>
+                    <Component Id="cmp81EE64714E720D2116ED2A16D877743B" Guid="{49691793-34AF-48A3-92C5-A13B91C196D2}">
+                        <File Id="fil0693A3606EC93FBCC0A97A42AFD9C423" KeyPath="yes" Source="$(var.DocumentDir)\_static\websupport.js" />
+                    </Component>
+                </Directory>
+        </DirectoryRef>
+
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ComponentGroup.Document">
+            <ComponentRef Id="cmpA0B4C36E53C7993CD3A7D9F7E713F310" />
+            <ComponentRef Id="cmpAB96E32DA6B40B1D235902DAA4F0AEEF" />
+            <ComponentRef Id="cmp6BE8B141EA6990618AEAD47B060B18F0" />
+            <ComponentRef Id="cmpC13F321535DAD0CF77ED590CF3FD28CF" />
+            <ComponentRef Id="cmpA83A12DA2CF5792047CB3FB76E0C1EDB" />
+            <ComponentRef Id="cmpC170A117362DCEAD2665BEC4CF004CEA" />
+            <ComponentRef Id="cmp236829F1DE0E5D58C421FE11899977C0" />
+            <ComponentRef Id="cmpE246D0CAD6619138F4C3999994E58C24" />
+            <ComponentRef Id="cmp000C1F1F19F2C88F462704CE87151837" />
+            <ComponentRef Id="cmp50DBB03D39641230CF3F31C0BF902168" />
+            <ComponentRef Id="cmp0376553591AF5FCBDA85C1D0ECADD352" />
+            <ComponentRef Id="cmpC3B886E61184F579CD418322614B36EC" />
+            <ComponentRef Id="cmp71AF02FBACFF3533F8AEE5BE0306D902" />
+            <ComponentRef Id="cmpD295E6B7DAF08809E04097E4520FAD08" />
+            <ComponentRef Id="cmp4C73951BC0F660AC10837859F7BF3DC1" />
+            <ComponentRef Id="cmpC0A62AE5525D08098650B3F620081888" />
+            <ComponentRef Id="cmp8754D7FE486E3948343B8827B301DC35" />
+            <ComponentRef Id="cmp06D0CE9A20C337FB63E4F689E9C50F31" />
+            <ComponentRef Id="cmp04DFF4BC92CA3C01A9CC0A48C2B22FF6" />
+            <ComponentRef Id="cmp4D4E29CB65F9A53870A3835E49E28119" />
+            <ComponentRef Id="cmp00009F33281088F0715DCA659CBC3EA3" />
+            <ComponentRef Id="cmpDB9171B371E9B143437D744BE9684034" />
+            <ComponentRef Id="cmp48664F49A4676959B235073225DF8746" />
+            <ComponentRef Id="cmp87B6614F9DF1F1A2922F1C225C53718C" />
+            <ComponentRef Id="cmp0AB5A64FC97FC2B5DC34C09ED3802187" />
+            <ComponentRef Id="cmp676D17C613EE4668AF93EB2BC84A87C6" />
+            <ComponentRef Id="cmpA1EAB735EC9C7BF182078350FEBC9680" />
+            <ComponentRef Id="cmp088647BBA12AD0641A1AF343F9F4612A" />
+            <ComponentRef Id="cmp3DC6A232FFA3C6292B9274A54E46AB60" />
+            <ComponentRef Id="cmp5827FEC8F455840F8F3DBF19CB9C4D61" />
+            <ComponentRef Id="cmp582116F144B2E95585AB9FEFFA0D6E6A" />
+            <ComponentRef Id="cmp9D5756451EBFC0D9815C6CC5ACC1DD57" />
+            <ComponentRef Id="cmp617C1E575F1F379E62782F231493CA75" />
+            <ComponentRef Id="cmp797977C914CF2B695BE24FFACE4703CC" />
+            <ComponentRef Id="cmp9A659A611E76226227FD3E100D43CD5D" />
+            <ComponentRef Id="cmp8A77062CD42B895BED01E945E7882691" />
+            <ComponentRef Id="cmp81EE64714E720D2116ED2A16D877743B" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

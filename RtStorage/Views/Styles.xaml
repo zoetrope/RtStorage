@@ -1,0 +1,88 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ViewModels="clr-namespace:RtStorage.ViewModels">
+
+
+
+    <Style TargetType="{x:Type ListBoxItem}">
+
+        <!--交互に色を変える-->
+        <!--
+        <Style.Triggers>
+            <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                <Setter Property="Background" Value="LightCyan" />
+            </Trigger>
+            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                <Setter Property="Background" Value="White" />
+            </Trigger>
+        </Style.Triggers>
+        -->
+
+        <!-- ListBoxのアイテムを伸縮させて表示させる -->
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+
+        <!-- 選択できないようにする -->
+        <Setter Property="Focusable" Value="False"/>
+    </Style>
+
+
+    <Style TargetType="{x:Type TreeViewItem}">
+        <Setter Property="IsSelected" Value="{Binding Path=IsSelected, Mode=TwoWay}"/>
+        <Setter Property="IsExpanded" Value="{Binding Path=IsExpand, Mode=TwoWay}"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <HierarchicalDataTemplate 
+                            DataType="{x:Type ViewModels:NamingServiceItemViewModel}" 
+                            ItemsSource="{Binding Children}">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="16" Height="16" Margin="3,0" Source="{StaticResource ImageNamingService}" />
+            <TextBlock Text="{Binding Name}" />
+        </StackPanel>
+    </HierarchicalDataTemplate>
+
+    <HierarchicalDataTemplate 
+                            DataType="{x:Type ViewModels:ContextItemViewModel}" 
+                            ItemsSource="{Binding Children}">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="16" Height="16" Margin="3,0" Source="{StaticResource ImageContext}" />
+            <TextBlock Text="{Binding Name}" />
+        </StackPanel>
+    </HierarchicalDataTemplate>
+
+    <HierarchicalDataTemplate 
+                            DataType="{x:Type ViewModels:ComponentItemViewModel}"
+                            ItemsSource="{Binding Children}">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="16" Height="16" Margin="3,0" Source="{StaticResource ImageComponent}" />
+            <TextBlock Text="{Binding Name}" />
+        </StackPanel>
+    </HierarchicalDataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:OutPortItemViewModel}">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="16" Height="16" Margin="3,0" Source="{StaticResource ImageOutPort}" />
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="{Binding Name}" />
+                <TextBlock Text="{Binding DataType}" />
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+
+    <DataTemplate DataType="{x:Type ViewModels:InPortItemViewModel}">
+        <StackPanel Orientation="Horizontal">
+            <Image Width="16" Height="16" Margin="3,0" Source="{StaticResource ImageInPort}" />
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="{Binding Name}" />
+                <TextBlock Text="{Binding DataType}" />
+            </StackPanel>
+        </StackPanel>
+
+    </DataTemplate>
+</ResourceDictionary>

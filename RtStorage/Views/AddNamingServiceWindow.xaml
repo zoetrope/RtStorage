@@ -1,0 +1,88 @@
+﻿<Window x:Class="RtStorage.Views.AddNamingServiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:l="http://schemas.livet-mvvm.net/2011/wpf" 
+        xmlns:Input="clr-namespace:Microsoft.Expression.Interactivity.Input;assembly=Microsoft.Expression.Interactions"
+        xmlns:Actions="clr-namespace:RtStorage.Views.Actions"
+        xmlns:Behaviors="clr-namespace:RtStorage.Views.Behaviors"
+        Title="ネーミングサービスの追加" 
+        Height="160" Width="300"
+        ResizeMode="NoResize"
+        FocusManager.FocusedElement="{Binding ElementName=hostNameTextBox}"
+        WindowStartupLocation="CenterScreen">
+
+    <!--ウインドウを開いたときのフォーカス設定 FocusManager.FocusedElement-->
+    <!--http://pro.art55.jp/?eid=1022656-->
+
+    <Window.Resources>
+        <!-- エラーがあるときにメッセージをToolTipに表示 -->
+        <!--http://blogs.wankuma.com/kazuki/archive/2008/08/21/153899.aspx-->
+        <Style TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip"   
+                        Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <i:Interaction.Triggers>
+        <l:InteractionMessageTrigger MessageKey="CloseWindow" Messenger="{Binding Messenger}">
+            <l:WindowInteractionMessageAction/>
+        </l:InteractionMessageTrigger>
+        <l:InteractionMessageTrigger MessageKey="AlreadyRegister" Messenger="{Binding Messenger}">
+            <l:InformationDialogInteractionMessageAction/>
+        </l:InteractionMessageTrigger>
+    </i:Interaction.Triggers>
+    
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Margin="10" Grid.Row="0" Grid.Column="0" Text="ホスト名"/>
+        <TextBox Margin="10" Grid.Row="0" Grid.Column="1"
+                 x:Name="hostNameTextBox"
+                 Text="{Binding HostName.Value,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}">
+            <i:Interaction.Triggers>
+                <!--このテキストボックスでEnter押したら、次のテキストボックスにフォーカスを移す-->
+                <Input:KeyTrigger Key="Enter" ActiveOnFocus="True">
+                    <Actions:SetFocusAction FocusItem="{Binding ElementName=portNumberTextBox}"/>
+                </Input:KeyTrigger>
+            </i:Interaction.Triggers>
+            <i:Interaction.Behaviors>
+                <Behaviors:SelectAllTextOnFocusBehavior/>
+            </i:Interaction.Behaviors>
+        </TextBox>
+
+        <TextBlock Margin="10" Grid.Row="1" Grid.Column="0" Text="ポート番号"/>
+        <TextBox Margin="10" Grid.Row="1" Grid.Column="1" 
+                 x:Name="portNumberTextBox"
+                 Text="{Binding PortNumber.Value,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}">
+            <i:Interaction.Triggers>
+                <!--このテキストボックスでEnter押したら、[追加]ボタンを押したのと同じ動き-->
+                <Input:KeyTrigger Key="Enter" ActiveOnFocus="True">
+                    <i:InvokeCommandAction Command="{Binding AddNamingServiceCommand}"/>
+                </Input:KeyTrigger>
+            </i:Interaction.Triggers>
+            <i:Interaction.Behaviors>
+                <Behaviors:SelectAllTextOnFocusBehavior/>
+            </i:Interaction.Behaviors>
+        </TextBox>
+
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Content="追加" Width="80" Margin="5" Command="{Binding AddNamingServiceCommand}"/>
+            <Button Content="キャンセル" Width="80" Margin="5" Command="{Binding CancelCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

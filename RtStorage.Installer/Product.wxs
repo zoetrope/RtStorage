@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Product.wxi?>
+
+  <Product Id="$(var.ProductCode)"
+           Name="RtStorage"
+           Manufacturer="zoetrope"
+           Language="1041" Codepage="932"
+           Version="$(var.ProductVersion)"
+           UpgradeCode="$(var.UpgradeCode)"
+           >
+
+    <!-- Idは*にしておくと自動生成される -->
+    <!-- Keywordsは検索用のキーワード。ほとんど意味はない。 -->
+    <!-- InstallerVersionはインストーラの実行に必要となるランタイムのバージョン。通常は200でよい。 -->
+    <Package Id="*" Keywords="Installer"
+             InstallerVersion="200"
+             Languages="1041" SummaryCodepage="932" Compressed="yes"
+             Manufacturer="zoetrope"
+             InstallPrivileges="elevated"
+             InstallScope="perMachine"
+             />
+    
+    <Upgrade Id='$(var.UpgradeCode)'>
+      <!--古いバージョンを見つける条件-->
+      <UpgradeVersion OnlyDetect='no' Property='PREVIOUSFOUND'
+                      Maximum='$(var.ProductVersion)' IncludeMaximum='no' />
+      <!--同じバージョンを見つける条件-->
+      <UpgradeVersion OnlyDetect='yes' Property='SELFFOUND'
+                      Minimum='$(var.ProductVersion)' IncludeMinimum='yes'
+                      Maximum='$(var.ProductVersion)' IncludeMaximum='yes' />
+      <!--新しいバージョンを見つける条件-->
+      <UpgradeVersion OnlyDetect='yes' Property='NEWERFOUND'
+                      Minimum='$(var.ProductVersion)' IncludeMinimum='no'/>
+    </Upgrade>
+    
+		<Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLLOCATION" Name="RtStorage">
+          <Directory Id="Directory.Binaries" Name="bin"/>
+          <Directory Id="Directory.Documents" Name="doc"/>
+				</Directory>
+			</Directory>
+
+
+      <!-- データはCommonAppDataFolderに配置する -->
+      <!-- XP: C:\Documents and Settings\All Users -->
+      <!-- Vista/7: C:\ProgramData -->
+      <Directory Id="CommonAppDataFolder">
+        <Directory Id="DATALOCATION" Name="RtStorage">
+          <Directory Id="Directory.Data" Name="Data"/>
+        </Directory>
+      </Directory>
+
+
+      <!-- スタートメニューへのショートカットの登録 -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="Directory.ProgramMenu" Name="RtStorage"/>
+      </Directory>
+		</Directory>
+
+		<Feature Id="ProductFeature" Title="RtStorage.Installer" Level="1">
+      <ComponentGroupRef Id="ComponentGroup.RtStorage"/>
+      <ComponentGroupRef Id="ComponentGroup.Data"/>
+      <ComponentGroupRef Id="ComponentGroup.Document"/>
+      <ComponentRef Id="Component.RtStorage.Shortcut"/>
+		</Feature>
+
+
+    <!-- UIの設定 -->
+    <!--インストールディレクトリを指定することができるUI-->
+    <UIRef Id="WixUI_InstallDir" />
+    <!--ローカライズされたエラーメッセージを使う-->
+    <UIRef Id="WixUI_ErrorProgressText" />
+    
+    <!--インストールディレクトリ指定のデフォルト値-->
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
+
+    <!-- ラインセンスの表示 -->
+    <WixVariable Id="WixUILicenseRtf" Value="../license.rtf"/>
+
+    <!--.NET Framework 4 Client Profileがインストールされていな場合は、インストールをブロックする-->
+    <PropertyRef Id="NETFRAMEWORK40CLIENT"/>
+    <Condition Message="RtStorageを利用するためには、.NET Framework 4 Client Profileをインストールしてください。">
+      <![CDATA[Installed OR NETFRAMEWORK40CLIENT]]>
+    </Condition>
+    
+    <!--アイコン設定。有効にならない？-->
+    <Icon Id="icon.ico" SourceFile="..\RtStorage\bin\Release\RtStorage.exe"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+    <InstallExecuteSequence>
+      <!--古いバージョンがインストールされている場合、InstallInitizalizeの後に古いものを削除する-->
+      <RemoveExistingProducts  After="InstallInitialize"/>
+      <!--新しいバージョンがインストールされている場合は、ダウングレードさせない-->
+      <Custom Action='NoDowngrade' After='FindRelatedProducts'>NEWERFOUND</Custom>
+    </InstallExecuteSequence>
+
+    <CustomAction Id='NoDowngrade' Error='すでに新しいバージョンのRtStorageがインストールされています。' />
+  </Product>
+
+</Wix>

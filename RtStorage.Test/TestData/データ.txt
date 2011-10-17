@@ -1,0 +1,36 @@
+TestData001
+
+            _description = new RecordDescription()
+            {
+                CreatedDateTime = DateTime.Now,
+                TimeSpan = 1661,
+                NamingName = "127.0.0.1:2809/ConsoleOut0.rtc",
+                ComponentType = "SampleOut",
+                PortName = "SampleOut0.out",
+                DataType = "IDL:RTC/TimedLong:1.0",
+                SumSize = 1200,
+                Count = 100,
+                IsLittleEndian = true,
+                IndexFileName = "TestData001.index",
+                DataFileName = "TestData001.data",
+            };
+
+TestData002
+
+            _description = new RecordDescription()
+            {
+                CreatedDateTime = DateTime.Now,
+                TimeSpan = 17460,
+                NamingName = "localhost:2809/ConsoleIn0.rtc",
+                ComponentType = "ConsoleIn",
+                PortName = "ConsoleIn0.out",
+                DataType = "IDL:RTC/TimedLong:1.0",
+                SumSize = 228,
+                Count = 19,
+                IsLittleEndian = 1,
+                IndexFileName = "TestData002.index",
+                DataFileName = "TestData002.data",
+            };
+37		2011-10-08	17460	localhost:2809/ConsoleIn0.rtc	ConsoleIn	ConsoleIn0.out	IDL:RTC/TimedLong:1.0	228	19	True	20111008_133005_localhost_2809_ConsoleIn0.rtc_ConsoleIn0.out.index	20111008_133005_localhost_2809_ConsoleIn0.rtc_ConsoleIn0.out.data
+
+

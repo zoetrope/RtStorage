@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Product.wxi?>
+    <Fragment>
+        <DirectoryRef Id="Directory.Binaries">
+                <Component Id="cmp328EF0385088DD0C3F0E5D5F9B266ED4" Guid="{6EAE8A68-36D6-4569-820E-DBE739CD2586}">
+                    <File Id="fil2CD259F11E3A7B25B35D789273B77A6E" KeyPath="yes" Source="$(var.BinariesDir)\DbExecutor.dll" />
+                </Component>
+                <Component Id="cmp9F8C0DE1F852EA706CC2F1E5A4D68996" Guid="{7FDE13A2-0017-4BAE-BBB1-38942B67872E}">
+                    <File Id="fil6C99C897758A6D31D8951B3D5F79B920" KeyPath="yes" Source="$(var.BinariesDir)\IIOPChannel.dll" />
+                </Component>
+                <Component Id="cmpBC079D0A314DBA35D72476AA8BDA416E" Guid="{4259D5A2-9178-4518-8747-A7BFF493434E}">
+                    <File Id="filEB5D5CA9DDB6FBDD8C75452B456A782C" KeyPath="yes" Source="$(var.BinariesDir)\Livet.dll" />
+                </Component>
+                <Component Id="cmp3259A7AA952D9099FCDBB7CBB1DDB2D8" Guid="{3B8D7720-7A1C-477A-99DA-255636AE67B9}">
+                    <File Id="fil33159858AFC14AAE1E305071EBB6F2C1" KeyPath="yes" Source="$(var.BinariesDir)\Microsoft.Expression.Interactions.dll" />
+                </Component>
+                <Component Id="cmpE51BA5CF67AF68AF4CEA1792A9196589" Guid="{8995BD6B-4EC9-4082-B1B2-35CE889CF30E}">
+                    <File Id="fil1E7366326571E03736991C6F62418E8F" KeyPath="yes" Source="$(var.BinariesDir)\ReactiveProperty.dll" />
+                </Component>
+                <Component Id="cmp3367545F2C6330DD3979D0B7F077D6A1" Guid="{022E5FB0-AD15-45C4-8C7C-CC7F64B0EA62}">
+                    <File Id="fil1FD70E62E27A71773DAEC218D4AF4930" KeyPath="yes" Source="$(var.BinariesDir)\RTC.dll" />
+                </Component>
+                <Component Id="cmp9C5FD3271A1AC30E8A75DF403B50EF58" Guid="{17453828-5DDF-4F48-8FD4-4C7D319A4FD1}">
+                    <File Id="fil3C06E19C65FED8B5DE4DDB535BBA027B" KeyPath="yes" Source="$(var.BinariesDir)\RtStorage.exe" />
+                </Component>
+                <Component Id="cmpBCC7ED948D0A9811E39113FC907649CD" Guid="{4F4C40A3-161D-4319-A827-D1E7B9148D5B}">
+                    <File Id="fil6372BDCF25E24E11D43B12E9F3FB78B0" KeyPath="yes" Source="$(var.ProjectDir)\RtStorage.exe.config" />
+                </Component>
+                <Component Id="cmpA1E3F12141D3B48FC06D43F165347724" Guid="{7D1EE740-0C40-4048-B20F-39C2E5211AA7}">
+                    <File Id="fil029A4BC6F37D646B7B872266C1DDB02C" KeyPath="yes" Source="$(var.BinariesDir)\RtUtility.dll" />
+                </Component>
+                <Component Id="cmpBC36AED72A4525A192E83D2CDB757217" Guid="{5C604E1C-316F-492A-B05C-6147F58B3686}">
+                    <File Id="filBABC4846A279A0982A62591807828493" KeyPath="yes" Source="$(var.BinariesDir)\System.Data.SQLite.dll" />
+                </Component>
+                <Component Id="cmp4679F0F4CBE484DC1B628EA220532ACB" Guid="{65911B83-5087-421A-8419-98F57469A2C9}">
+                    <File Id="filC2183A72D0E4B1910F719DC37A50A349" KeyPath="yes" Source="$(var.BinariesDir)\System.Data.SQLite.Linq.dll" />
+                </Component>
+                <Component Id="cmp66B62349BB539B116A0AC92FFB202DAC" Guid="{5DC8685E-A169-452D-BF25-E41E97A9F199}">
+                    <File Id="fil6E4E32CC22F2112D3B35737BF0819458" KeyPath="yes" Source="$(var.BinariesDir)\System.Interactive.dll" />
+                </Component>
+                <Component Id="cmp108FA6E870CE9E8BE7820E71FE5CD1E5" Guid="{0F2A1B2C-6F9B-47FB-AF02-01400107414C}">
+                    <File Id="fil69F62904D035A07E7171926EDD324834" KeyPath="yes" Source="$(var.BinariesDir)\System.Reactive.dll" />
+                </Component>
+                <Component Id="cmp160206F5607BB0DC97BB624130EAFD0A" Guid="{BCF13EA1-740B-41FD-8325-D5C5487201C3}">
+                    <File Id="fil289CEB549BA62CE6686DD3E1F5E78849" KeyPath="yes" Source="$(var.BinariesDir)\System.Reactive.Windows.Threading.dll" />
+                </Component>
+                <Component Id="cmp3A3FC64B53809F6E160BAAD2EA44DA8F" Guid="{E324FD72-84F5-40B7-B9D1-ED1E54B68E0D}">
+                    <File Id="fil960894C599DA2294FDD40DB8D43F91DA" KeyPath="yes" Source="$(var.BinariesDir)\System.Windows.Controls.DataVisualization.Toolkit.dll" />
+                </Component>
+                <Component Id="cmp8D18ED7D5E17DF7D5B2F25E9107B2876" Guid="{8BA3B6A2-3AD8-4E13-A094-BCA66A4C2D61}">
+                    <File Id="filB0E41133D4132585A93295F954E3D499" KeyPath="yes" Source="$(var.BinariesDir)\System.Windows.Interactivity.dll" />
+                </Component>
+        </DirectoryRef>
+        <DirectoryRef Id="Directory.Data">
+          <Component Id="cmp5769ECBA843C98F6299EFBD4D126B6F5" Guid="{736F2E50-8D56-476D-A007-DA70EF1A26EF}">
+            <File Id="fil937CBE9377E9F4391FA9EB310F809155" KeyPath="yes" Source="$(var.ProjectDir)\Data\RecordDescriptions.db" />
+          </Component>
+        </DirectoryRef>
+
+
+      <DirectoryRef Id="Directory.ProgramMenu">
+        <Component Id="Component.RtStorage.Shortcut" Guid="{0CD805F1-C1BF-44D1-BBA2-580F05CCFC33}">
+          <Shortcut Id="Shortcut.RtStorage"
+            Name="RtStorage"
+            Description="RtStorage.exeへのショートカット"
+            Target="[Directory.Binaries]RtStorage.exe"
+            WorkingDirectory="Directory.Binaries"/>
+          <Shortcut Id="Shortcut.Document"
+            Name="RtStorageマニュアル"
+            Description="RtStorageマニュアルへのショートカット"
+            Target="[Directory.Documents]index.html"
+            WorkingDirectory="Directory.Documents"/>
+          <RemoveFolder Id="Directory.ProgramMenu" On="uninstall"/>
+          <RegistryValue Root="HKCU" Key="Software\zoetrope\RtStorage" Name="Installed" Type="integer" Value="1" KeyPath="yes"/>
+        </Component>
+      </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ComponentGroup.RtStorage">
+            <ComponentRef Id="cmp328EF0385088DD0C3F0E5D5F9B266ED4" />
+            <ComponentRef Id="cmp9F8C0DE1F852EA706CC2F1E5A4D68996" />
+            <ComponentRef Id="cmpBC079D0A314DBA35D72476AA8BDA416E" />
+            <ComponentRef Id="cmp3259A7AA952D9099FCDBB7CBB1DDB2D8" />
+            <ComponentRef Id="cmpE51BA5CF67AF68AF4CEA1792A9196589" />
+            <ComponentRef Id="cmp3367545F2C6330DD3979D0B7F077D6A1" />
+            <ComponentRef Id="cmp9C5FD3271A1AC30E8A75DF403B50EF58" />
+            <ComponentRef Id="cmpBCC7ED948D0A9811E39113FC907649CD" />
+            <ComponentRef Id="cmpA1E3F12141D3B48FC06D43F165347724" />
+            <ComponentRef Id="cmpBC36AED72A4525A192E83D2CDB757217" />
+            <ComponentRef Id="cmp4679F0F4CBE484DC1B628EA220532ACB" />
+            <ComponentRef Id="cmp66B62349BB539B116A0AC92FFB202DAC" />
+            <ComponentRef Id="cmp108FA6E870CE9E8BE7820E71FE5CD1E5" />
+            <ComponentRef Id="cmp160206F5607BB0DC97BB624130EAFD0A" />
+            <ComponentRef Id="cmp3A3FC64B53809F6E160BAAD2EA44DA8F" />
+            <ComponentRef Id="cmp8D18ED7D5E17DF7D5B2F25E9107B2876" />
+        </ComponentGroup>
+      <ComponentGroup Id="ComponentGroup.Data">
+        <ComponentRef Id="cmp5769ECBA843C98F6299EFBD4D126B6F5" />
+      </ComponentGroup>
+    </Fragment>
+</Wix>

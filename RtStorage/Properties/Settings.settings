@@ -1,0 +1,19 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RtStorage.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MainWindowPlacement" Type="RtStorage.Views.Behaviors.WINDOWPLACEMENT" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SearchRecordWindowPlacement" Type="RtStorage.Views.Behaviors.WINDOWPLACEMENT" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DataDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\Data\</Value>
+    </Setting>
+    <Setting Name="NamingServices" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

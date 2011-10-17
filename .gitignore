@@ -8,3 +8,6 @@ obj
 *.suo
 /_ReSharper.RtStorage
 *.user
+Thumbs.db
+Doc/build
+/Release
