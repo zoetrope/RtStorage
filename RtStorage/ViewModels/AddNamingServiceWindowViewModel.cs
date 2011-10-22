@@ -38,7 +38,6 @@ namespace RtStorage.ViewModels
 
             AddNamingServiceCommand = errors.Select(x => x == null).ToReactiveCommand(initialValue: false);
 
-            // ちょっと固まるので非同期にしたい。
             AddNamingServiceCommand.Subscribe(_ => AddNamingService());
         }
 

@@ -16,7 +16,7 @@
                     <File Id="fil33159858AFC14AAE1E305071EBB6F2C1" KeyPath="yes" Source="$(var.BinariesDir)\Microsoft.Expression.Interactions.dll" />
                 </Component>
                 <Component Id="cmpE51BA5CF67AF68AF4CEA1792A9196589" Guid="{8995BD6B-4EC9-4082-B1B2-35CE889CF30E}">
-                    <File Id="fil1E7366326571E03736991C6F62418E8F" KeyPath="yes" Source="$(var.BinariesDir)\ReactiveProperty.dll" />
+                    <File Id="fil1E7366326571E03736991C6F62418E8F" KeyPath="yes" Source="$(var.BinariesDir)\ReactiveProperty.NET40.dll" />
                 </Component>
                 <Component Id="cmp3367545F2C6330DD3979D0B7F077D6A1" Guid="{022E5FB0-AD15-45C4-8C7C-CC7F64B0EA62}">
                     <File Id="fil1FD70E62E27A71773DAEC218D4AF4930" KeyPath="yes" Source="$(var.BinariesDir)\RTC.dll" />

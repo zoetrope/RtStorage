@@ -43,7 +43,7 @@ namespace RtStorage.ViewModels
 
             Items = UpdateCommand
                 .SelectMany(_ => AnalyzeAsync(isCreating))
-                .Do(_ => Items.RemoveAll())
+                .Do(_ => Items.ClearOnScheduler())
                 .SelectMany(_ => _)
                 .ToReactiveCollection();
         }

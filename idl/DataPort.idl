@@ -14,32 +14,15 @@
  *
  *     All rights reserved.
  *
- * $Id: DataPort.idl 1338 2009-05-18 05:58:25Z n-ando $
+ * $Id: DataPort.idl 1597 2009-12-22 02:26:17Z n-ando $
  *
  */
 
 #ifndef DataInPort_idl
 #define DataInPort_idl
 
-module RTC
-{
-  interface InPortAny
-  {
-    void put(in any data);
-  };
-
-
-  interface OutPortAny
-  {
-    any get();
-  };
-
-};
-
-
 module OpenRTM
 {
-  
   enum PortStatus
   {
     PORT_OK,

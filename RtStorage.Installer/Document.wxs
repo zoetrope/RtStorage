@@ -33,6 +33,35 @@
                 <Component Id="cmp50DBB03D39641230CF3F31C0BF902168" Guid="{1CE15E5F-0333-48F7-8B1E-D785D6238FDF}">
                     <File Id="filAE3D67B4F2D0C405E61F9DE4D1B677E9" KeyPath="yes" Source="$(var.DocumentDir)\usage.html" />
                 </Component>
+                <Directory Id="dirC2A0597845E7D273D9D7F63F9052FBC7" Name="_images">
+                  <Component Id="cmpFD77389BB08427E1438A0E18348029E5" Guid="{EE91C7AC-2281-4ADC-968A-90DE71792436}">
+                    <File Id="filC892503181119B0C9CCBBC8E4A5AF392" KeyPath="yes" Source="$(var.DocumentDir)\_images\Analysis.png" />
+                  </Component>
+                  <Component Id="cmpD67F16D3A1AF34A293681726DB781F6F" Guid="{A00AB7B9-CA36-45FF-A936-4FDEEFBDCF30}">
+                    <File Id="filA20584C23227EE7AEECF59E8850AB523" KeyPath="yes" Source="$(var.DocumentDir)\_images\DataDirectory.png" />
+                  </Component>
+                  <Component Id="cmpA24E861B04184139B571DECD3479EF1C" Guid="{AAE1AE44-D088-4F74-8946-7B82A8D99312}">
+                    <File Id="fil43D3BEB5D97FF99875ADF7EB930B955A" KeyPath="yes" Source="$(var.DocumentDir)\_images\Main.png" />
+                  </Component>
+                  <Component Id="cmp2FC448A753CC441C73BE757F6E1DE40E" Guid="{4D87253C-1287-46B0-87C8-147A730AC948}">
+                    <File Id="fil910A34F01C16B42755794AB73B3D30F4" KeyPath="yes" Source="$(var.DocumentDir)\_images\NamingService.png" />
+                  </Component>
+                  <Component Id="cmp833657BDCD8645CE759B67195117E1F4" Guid="{0370B6EE-FAAF-4D61-8343-C1B19666A69E}">
+                    <File Id="fil59697F89F2D369D70F473B26D7FC824F" KeyPath="yes" Source="$(var.DocumentDir)\_images\Play.png" />
+                  </Component>
+                  <Component Id="cmp63A6CDFEA51E34DF7B88E78E7DADD2DE" Guid="{B9AC2D1A-DB62-4F7B-898D-63A7F5DF9B88}">
+                    <File Id="filAA68179E0FBD56866255E032C91679D7" KeyPath="yes" Source="$(var.DocumentDir)\_images\Record.png" />
+                  </Component>
+                  <Component Id="cmp156558E4F7301CE3F28AD049BC62ECB3" Guid="{D48A4FE7-707B-463D-B7BA-FA527673A217}">
+                    <File Id="fil55990EB1B91F8A75511CDBB9046CAEB4" KeyPath="yes" Source="$(var.DocumentDir)\_images\Search.png" />
+                  </Component>
+                  <Component Id="cmpE640960FE5BF4FBADA3889EF5EF73CFE" Guid="{8371A3EF-2DB3-44CE-A357-B2F8081A77F4}">
+                    <File Id="fil695FF527EDCF1CBEBF089E9665A2ADEE" KeyPath="yes" Source="$(var.DocumentDir)\_images\SelectInPort.png" />
+                  </Component>
+                  <Component Id="cmp6A4E48DA99B81C3FDC87E47EB8200286" Guid="{E1E43BA1-5F62-40F8-AD7E-B6FEF8DE95CE}">
+                    <File Id="filAADB59320560AD95B189AD8CF5804BE4" KeyPath="yes" Source="$(var.DocumentDir)\_images\SelectOutPort.png" />
+                  </Component>
+                </Directory>
                 <Directory Id="dirB86912B694E076F033ACA75BE6863956" Name="_sources">
                     <Component Id="cmp0376553591AF5FCBDA85C1D0ECADD352" Guid="{7F79F9FC-2FCB-4AE3-B889-AF52AC4BED8D}">
                         <File Id="fil76C5CE4BF255FD00DE86426AE121AD88" KeyPath="yes" Source="$(var.DocumentDir)\_sources\index.txt" />
@@ -133,6 +162,15 @@
             <ComponentRef Id="cmpE246D0CAD6619138F4C3999994E58C24" />
             <ComponentRef Id="cmp000C1F1F19F2C88F462704CE87151837" />
             <ComponentRef Id="cmp50DBB03D39641230CF3F31C0BF902168" />
+            <ComponentRef Id="cmpFD77389BB08427E1438A0E18348029E5" />
+            <ComponentRef Id="cmpD67F16D3A1AF34A293681726DB781F6F" />
+            <ComponentRef Id="cmpA24E861B04184139B571DECD3479EF1C" />
+            <ComponentRef Id="cmp2FC448A753CC441C73BE757F6E1DE40E" />
+            <ComponentRef Id="cmp833657BDCD8645CE759B67195117E1F4" />
+            <ComponentRef Id="cmp63A6CDFEA51E34DF7B88E78E7DADD2DE" />
+            <ComponentRef Id="cmp156558E4F7301CE3F28AD049BC62ECB3" />
+            <ComponentRef Id="cmpE640960FE5BF4FBADA3889EF5EF73CFE" />
+            <ComponentRef Id="cmp6A4E48DA99B81C3FDC87E47EB8200286" />
             <ComponentRef Id="cmp0376553591AF5FCBDA85C1D0ECADD352" />
             <ComponentRef Id="cmpC3B886E61184F579CD418322614B36EC" />
             <ComponentRef Id="cmp71AF02FBACFF3533F8AEE5BE0306D902" />

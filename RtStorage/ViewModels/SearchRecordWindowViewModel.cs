@@ -36,7 +36,7 @@ namespace RtStorage.ViewModels
 
             // 検索ボタンが押されたら検索処理を非同期で実行し、その結果をSearchResultsに入れる
             SearchResults = SearchCommand.SelectMany(_ => SearchAsync(isSearching))
-                .Do(_ => SearchResults.Clear())
+                .Do(_ => SearchResults.ClearOnScheduler())
                 .SelectMany(_ => _)
                 .Select(r => new SearchResultViewModel(r, NotifyAdopt))
                 .ToReactiveCollection();
@@ -55,20 +55,20 @@ namespace RtStorage.ViewModels
             DataTypes = UpdateDataTypeCommand
                 .SelectMany(_=>Observable.Start(()=>_recordDescriptionRepository.GetDataTypes(componentType,portName))
                     .Catch((Exception ex) => Messenger.Raise(new InformationMessage("データベースアクセスに失敗しました。", "エラー", "ShowError"))))
-                .Do(_=>DataTypes.Clear())
+                .Do(_ => DataTypes.ClearOnScheduler())
                 .SelectMany(_=>_)
                 .ToReactiveCollection();
 
             PortNames = UpdatePortNameCommand
                 .SelectMany(_=>Observable.Start(()=>_recordDescriptionRepository.GetPortNames(dataType,componentType))
                     .Catch((Exception ex) => Messenger.Raise(new InformationMessage("データベースアクセスに失敗しました。", "エラー", "ShowError"))))
-                .Do(_=>PortNames.Clear())
+                .Do(_ => PortNames.ClearOnScheduler())
                 .SelectMany(_=>_)
                 .ToReactiveCollection();
             ComponentTypes = UpdateCompoentTypeCommand
                 .SelectMany(_=>Observable.Start(()=>_recordDescriptionRepository.GetComponentTypes(dataType,portName))
                     .Catch((Exception ex) => Messenger.Raise(new InformationMessage("データベースアクセスに失敗しました。", "エラー", "ShowError"))))
-                .Do(_=>ComponentTypes.Clear())
+                .Do(_ => ComponentTypes.ClearOnScheduler())
                 .SelectMany(_=>_)
                 .ToReactiveCollection();
 
