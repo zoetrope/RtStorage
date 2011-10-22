@@ -1,5 +1,5 @@
 //Platform Independent Model (PIM) and Platform Specific Model (PSM)
-//for Super Distributed Objects (SDO) Specification, v1.0 - OMG IDL Summary File
+//for Super Distributed Objects (SDO) Specification, v1.1 - OMG IDL Summary File
 //Object Management Group, Inc.
 //Copyright (c) 2003, Fraunhofer FOKUS
 //Copyright (c) 2003, Hitachi, Ltd.
@@ -21,6 +21,10 @@
 //their own code, or use it for documentation purposes. Having the code lines 
 //available electronically means there is less likelihood of a transcription 
 //error. 
+//
+// ver 1.0  formal/2004-11-02
+// ver 1.1  (RTF report: dtc/2008-03-05)
+//
 //SDOPackage.idl
 
 #ifndef    _SDO_PACKAGE_IDL_

@@ -1,5 +1,8 @@
 // RTC.idl
 
+#ifndef __RTC_IDL__
+#define __RTC_IDL__
+
 #include "SDOPackage.idl"
 
 #pragma prefix "omg.org"
@@ -2649,3 +2652,5 @@ module RTC
 };
 
 #pragma prefix ""
+
+#endif // __RTC_IDL__

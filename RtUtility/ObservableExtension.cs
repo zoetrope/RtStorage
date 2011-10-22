@@ -24,24 +24,6 @@ namespace RtUtility
             });
         }
 
-        /// <summary>
-        /// 配列の要素をすべて削除する。
-        /// ObservableCollection.Clearは、CollectionChangedイベントが発生しないので。
-        /// スレッドセーフではない。
-        /// </summary>
-        /// <remarks>
-        /// http://stackoverflow.com/questions/224155/when-clearing-an-observablecollection-there-are-no-items-in-e-olditems
-        /// </remarks>
-        public static void RemoveAll<T>(this ObservableCollection<T> list)
-        {
-            lock (list)
-            {
-                while (list.Count > 0)
-                {
-                    list.RemoveAt(list.Count - 1);
-                }
-            }
-        }
 
     }
 }

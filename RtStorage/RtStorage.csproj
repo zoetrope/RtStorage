@@ -69,8 +69,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Livet.0.98\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
-    <Reference Include="ReactiveProperty">
-      <HintPath>..\packages\ReactiveProperty.0.1.0.0\lib\NET40\ReactiveProperty.dll</HintPath>
+    <Reference Include="ReactiveProperty.NET40">
+      <HintPath>..\packages\ReactiveProperty.0.2.0.0\lib\NET40\ReactiveProperty.NET40.dll</HintPath>
     </Reference>
     <Reference Include="RTC, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -103,7 +103,7 @@
     </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReactiveProperty.0.1.0.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\ReactiveProperty.0.2.0.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />

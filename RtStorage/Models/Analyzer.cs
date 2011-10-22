@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using Codeplex.Reactive.Notifier;
 using Livet;
-using RtStorage.ViewModels;
 
 namespace RtStorage.Models
 {
