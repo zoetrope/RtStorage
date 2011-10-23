@@ -19,10 +19,10 @@ http://msdn.microsoft.com/ja-jp/library/8z6watww.aspx
 ^^^^^^^^^^^^^^^^^^^^^^^^
 RtStorageでは2種類のインストールパッケージを用意しています。
 
-RtStorage-0.3.0.msi
+RtStorage-0.3.1.msi
   インストーラを起動してインストールを行ってください。
 
-RtStorage-0.3.0.zip
+RtStorage-0.3..zip
   zipファイルを任意のフォルダに展開してください。
 
 

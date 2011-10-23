@@ -25,12 +25,12 @@ namespace RtStorage.ViewModels
             _manager = manager;
             _recorders = new ObservableCollection<Recorder>();
 
-            RecorderViewModels = ViewModelHelper.CreateReadOnlyNotificationDispatcherCollection(
+            RecorderViewModels = ViewModelHelper.CreateReadOnlyDispatcherCollection<RecorderControlViewModel, Recorder>(
                 _recorders,
                 recorder => new RecorderControlViewModel(this,recorder), 
                 DispatcherHelper.UIDispatcher);
 
-            NamingServiceTree = ViewModelHelper.CreateReadOnlyNotificationDispatcherCollection(
+            NamingServiceTree = ViewModelHelper.CreateReadOnlyDispatcherCollection<TreeViewItemViewModel,TreeViewItemViewModel>(
                 _manager.OutPortTree,
                 item => item,
                 DispatcherHelper.UIDispatcher);
@@ -43,13 +43,13 @@ namespace RtStorage.ViewModels
 
         private ObservableCollection<Recorder> _recorders;
 
-        public ReadOnlyNotificationDispatcherCollection<RecorderControlViewModel> RecorderViewModels
+        public ReadOnlyDispatcherCollection<RecorderControlViewModel> RecorderViewModels
         {
             get;
             private set;
         }
 
-        public ReadOnlyNotificationDispatcherCollection<TreeViewItemViewModel> NamingServiceTree
+        public ReadOnlyDispatcherCollection<TreeViewItemViewModel> NamingServiceTree
         {
             get;
             private set;

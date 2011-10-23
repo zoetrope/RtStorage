@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Include>
-  <?define ProductVersion="0.3.0" ?>
-  <?define ProductCode = "{FBB587B5-7CA3-45FB-8235-DF5D5C8DE111}" ?>
+  <?define ProductVersion="0.3.1" ?>
+  <?define ProductCode = "{6BE0F592-90A5-4A82-AC3F-68DD1C71B8E3}" ?>
   <?define UpgradeCode = "{680a47e9-052a-47c8-b920-cd2a8a7bf5c5}" ?>
   <?define DocumentDir="..\Doc\build\html\" ?>
   <?define BinariesDir="..\RtStorage\bin\Release\" ?>

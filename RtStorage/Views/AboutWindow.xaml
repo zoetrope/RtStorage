@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,5,0,0"
-                       FontSize="16" FontWeight="Bold">RtStorage 0.3.0</TextBlock>
+                       FontSize="16" FontWeight="Bold">RtStorage 0.3.1</TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="20,0,0,10" TextWrapping="Wrap">
                 RtStorageは、RTミドルウェアのためのデータ記録・再生用ツールです。<LineBreak/>
                 Copyright (c) 2011 zoetrope. All Rights Reserved.<LineBreak/>

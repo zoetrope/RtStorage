@@ -27,13 +27,13 @@ namespace RtStorage.ViewModels
             _players = new ObservableCollection<Player>();
 
 
-            PlayerViewModels = ViewModelHelper.CreateReadOnlyNotificationDispatcherCollection(
+            PlayerViewModels = ViewModelHelper.CreateReadOnlyDispatcherCollection<PlayerControlViewModel,Player>(
                 _players,
                 player => new PlayerControlViewModel(this,player),
                 DispatcherHelper.UIDispatcher);
 
 
-            NamingServiceTree = ViewModelHelper.CreateReadOnlyNotificationDispatcherCollection(
+            NamingServiceTree = ViewModelHelper.CreateReadOnlyDispatcherCollection<TreeViewItemViewModel,TreeViewItemViewModel>(
                 _manager.InPortTree,
                 item => item,
                 DispatcherHelper.UIDispatcher);
@@ -47,13 +47,13 @@ namespace RtStorage.ViewModels
 
         private ObservableCollection<Player> _players;
 
-        public ReadOnlyNotificationDispatcherCollection<PlayerControlViewModel> PlayerViewModels
+        public ReadOnlyDispatcherCollection<PlayerControlViewModel> PlayerViewModels
         {
             get;
             private set;
         }
 
-        public ReadOnlyNotificationDispatcherCollection<TreeViewItemViewModel> NamingServiceTree
+        public ReadOnlyDispatcherCollection<TreeViewItemViewModel> NamingServiceTree
         {
             get;
             private set;

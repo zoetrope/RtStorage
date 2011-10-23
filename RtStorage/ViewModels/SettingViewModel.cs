@@ -23,7 +23,7 @@ namespace RtStorage.ViewModels
         public SettingViewModel(NamingServiceManager manager)
         {
             _manager = manager;
-            NamingServices = ViewModelHelper.CreateReadOnlyNotificationDispatcherCollection(
+            NamingServices = ViewModelHelper.CreateReadOnlyDispatcherCollection<NamingServiceViewModel,NamingService>(
                 _manager.NamingServices,
                 ns => new NamingServiceViewModel(ns),
                 DispatcherHelper.UIDispatcher);
@@ -31,7 +31,7 @@ namespace RtStorage.ViewModels
             DataDirectory = Environment.ExpandEnvironmentVariables(Settings.Default.DataDirectory);
         }
 
-        public ReadOnlyNotificationDispatcherCollection<NamingServiceViewModel> NamingServices { get; private set; }
+        public ReadOnlyDispatcherCollection<NamingServiceViewModel> NamingServices { get; private set; }
 
 
         #region AddNamingServiceCommand

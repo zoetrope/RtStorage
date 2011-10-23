@@ -62,19 +62,22 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\IIOP.NET.1.9.0\IIOPChannel.dll</HintPath>
     </Reference>
-    <Reference Include="Livet">
-      <HintPath>..\Lib\Livet.0.98\Livet.dll</HintPath>
+    <Reference Include="Livet, Version=0.99.2011.1019, Culture=neutral, PublicKeyToken=b0b1d3f711ef38cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Livet.0.99\Livet.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Livet.0.98\Microsoft.Expression.Interactions.dll</HintPath>
+      <HintPath>..\Lib\Livet.0.99\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
     <Reference Include="ReactiveProperty.NET40">
       <HintPath>..\packages\ReactiveProperty.0.2.0.0\lib\NET40\ReactiveProperty.NET40.dll</HintPath>
     </Reference>
     <Reference Include="RTC, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\RtUtility\RTC.dll</HintPath>
+    </Reference>
+    <Reference Include="RtUtility, Version=0.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\idl\RTC.dll</HintPath>
+      <HintPath>..\Lib\RtUtility\RtUtility.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -103,7 +106,7 @@
     </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReactiveProperty.0.2.0.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\Lib\Livet.0.99\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -273,12 +276,6 @@
     <Resource Include="Views\Images\folder.png" />
     <Resource Include="Views\Images\plug.png" />
     <Resource Include="Views\Images\socket.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RtUtility\RtUtility.csproj">
-      <Project>{99F53046-1852-4E68-9BB3-8F8A522988DE}</Project>
-      <Name>RtUtility</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="rtstorage.ico" />

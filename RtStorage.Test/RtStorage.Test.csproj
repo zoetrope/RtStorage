@@ -45,8 +45,11 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="RTC">
-      <HintPath>..\idl\RTC.dll</HintPath>
+    <Reference Include="RTC, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\RtUtility\RTC.dll</HintPath>
+    </Reference>
+    <Reference Include="RtUtility, Version=0.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\RtUtility\RtUtility.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -73,9 +76,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CdrSerializerTest.cs" />
     <Compile Include="ChainingAssertion.MSTest.cs" />
-    <Compile Include="MockTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordDescriptionRepositoryTest.cs" />
     <Compile Include="RecorderTest.cs" />
@@ -85,10 +86,6 @@
     <ProjectReference Include="..\RtStorage\RtStorage.csproj">
       <Project>{F69B1A9F-6723-428B-9B17-A317B36F3420}</Project>
       <Name>RtStorage</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RtUtility\RtUtility.csproj">
-      <Project>{99F53046-1852-4E68-9BB3-8F8A522988DE}</Project>
-      <Name>RtUtility</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
