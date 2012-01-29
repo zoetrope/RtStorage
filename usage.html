@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>使い方 &mdash; RtStorage 0.3.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.3.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="RtStorage 0.3.1 documentation" href="index.html" />
+    <link rel="next" title="利用ライブラリ＆アイコン" href="library.html" />
+    <link rel="prev" title="インストール" href="installation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="library.html" title="利用ライブラリ＆アイコン"
+             accesskey="N">次へ</a></li>
+        <li class="right" >
+          <a href="installation.html" title="インストール"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">RtStorage 0.3.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>使い方<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>インストーラでインストールした場合は、Windowsのスタートメニューから、RtStorageを起動してください。</p>
+<p>zipファイルを展開した場合は、RtStrage/bin/RtStorage.exeを起動してください。</p>
+<div class="section" id="id2">
+<h2>メイン画面<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アプリケーションを起動すると、図のような画面が起動します。
+左上のタブで、アプリケーションの4つの画面を切り替えることができます。</p>
+<img alt="_images/Main.png" src="_images/Main.png" style="width: 640px; height: 480px;" />
+</div>
+<div class="section" id="id3">
+<h2>設定<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まずは設定タブに切り替えて、アプリケーションの設定をしましょう。</p>
+<p>図のようにデータ保存ディレクトリを設定します。
+データの保存ディレクトリは、RTコンポーネントから出力されたデータを保存するディレクトリです。</p>
+<p>設定を反映させるためには、一度アプリケーションを再起動する必要があります。</p>
+<img alt="_images/DataDirectory.png" src="_images/DataDirectory.png" style="width: 640px; height: 480px;" />
+<p>次にネーミングサービスの設定を行います。</p>
+<p>ネーミングサービスの追加ボタンを押し、RTコンポーネントが登録されているネーミングサービスのホスト名とポート番号を設定してください。</p>
+<img alt="_images/NamingService.png" src="_images/NamingService.png" style="width: 640px; height: 480px;" />
+</div>
+<div class="section" id="id4">
+<h2>記録<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>記録画面に切り替えると、ネーミングサービスに登録されているRTコンポーネントのアウトポートの一覧がツリー形式で表示されます。</p>
+<p>データを記録したいアウトポートを選択し、左下の追加ボタンを押してください。</p>
+<img alt="_images/SelectOutPort.png" src="_images/SelectOutPort.png" style="width: 640px; height: 480px;" />
+<p>追加ボタンを押すと、画面の右側にレコーダーの操作パネルが現れます。
+データの記録を開始したいタイミングで、記録ボタンを押してください。</p>
+<p>「コンポーネントを活性化する」にチェックを入れておくと、記録ボタンを押したタイミングでコンポーネントが自動的に活性化されます。</p>
+<img alt="_images/Record.png" src="_images/Record.png" style="width: 640px; height: 480px;" />
+</div>
+<div class="section" id="id5">
+<h2>再生<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>再生画面に切り替えると、ネーミングサービスに登録されているRTコンポーネントのインポートの一覧がツリー形式で表示されます。</p>
+<p>データを再生したいインポートを選択し、左下の追加ボタンを押してください。</p>
+<img alt="_images/SelectInPort.png" src="_images/SelectInPort.png" style="width: 640px; height: 480px;" />
+<p>追加ボタンを押すと、データの検索画面が表示されます。</p>
+<p>検索条件を指定して検索ボタンを押すと、検索結果が表示されるので、再生したいデータを選択してください。</p>
+<img alt="_images/Search.png" src="_images/Search.png" style="width: 640px; height: 480px;" />
+<p>データを選択すると、画面の右側にプレイヤーの操作パネルが現れます。
+データの再生を開始したいタイミングで、記録ボタンを押してください。</p>
+<p>「コンポーネントを活性化する」にチェックを入れておくと、再生ボタンを押したタイミングでコンポーネントが自動的に活性化されます。</p>
+<p>「再生を繰り返す」にチェックを入れると、再生が完了したときに最初から再生を繰り返します。</p>
+<p>また、スライドバーを操作することで、再生データの再生位置を任意の位置に変更することができます。</p>
+<img alt="_images/Play.png" src="_images/Play.png" style="width: 640px; height: 480px;" />
+</div>
+<div class="section" id="id6">
+<h2>解析<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>解析画面に切り替えて、
+「データの選択」を押して、解析したいデータを選択してください。</p>
+<p>データを選択すると、図のようにデータの各種情報や、再生タイミングの分布グラフが表示されます。</p>
+<img alt="_images/Analysis.png" src="_images/Analysis.png" style="width: 640px; height: 480px;" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">使い方</a><ul>
+<li><a class="reference internal" href="#id2">メイン画面</a></li>
+<li><a class="reference internal" href="#id3">設定</a></li>
+<li><a class="reference internal" href="#id4">記録</a></li>
+<li><a class="reference internal" href="#id5">再生</a></li>
+<li><a class="reference internal" href="#id6">解析</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="installation.html"
+                        title="前の章へ">インストール</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="library.html"
+                        title="次の章へ">利用ライブラリ＆アイコン</a></p>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="library.html" title="利用ライブラリ＆アイコン"
+             >次へ</a></li>
+        <li class="right" >
+          <a href="installation.html" title="インストール"
+             >前へ</a> |</li>
+        <li><a href="index.html">RtStorage 0.3.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, zoetrope.
+    </div>
+  </body>
+</html>
