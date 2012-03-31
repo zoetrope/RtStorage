@@ -98,7 +98,7 @@ ChainingAssertion
 
 .. _`GNU Lesser General Public License (LGPL)`: http://www.gnu.org/copyleft/lesser.html
 .. _`zlib/libpng`: http://www.opensource.org/licenses/Zlib
-.. _`Ms-PL`: http://chainingassertion.codeplex.com/license
+.. _`Ms-PL`: http://msdn.microsoft.com/ja-jp/library/gg592960.aspx
 .. _`Rx Eula`: http://msdn.microsoft.com/en-us/hh295787
 .. _`Public Domain`: http://www.sqlite.org/copyright.html
 .. _`Common Public License (CPL)`: http://www.ibm.com/developerworks/library/os-cpl.html

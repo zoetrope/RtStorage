@@ -33,5 +33,5 @@ RTミドルウェアに関する情報については http://www.openrtm.org/ �
 Copyright (c) 2011 zoetrope. All Rights Reserved.
 Licensed undear a `Microsoft Permissive License (Ms-PL)`_.
 
-.. _`Microsoft Permissive License (Ms-PL)`: http://chainingassertion.codeplex.com/license
+.. _`Microsoft Permissive License (Ms-PL)`: http://msdn.microsoft.com/ja-jp/library/gg592960.aspx
 
